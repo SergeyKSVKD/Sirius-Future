@@ -10,7 +10,9 @@
     justify-content: center;
     margin: 0;
     padding: 0;
-    user-select: none;
+    min-height: 100vh;
+    line-height: 1.5;
+    // user-select: none;
     background-color: var(--white);
   }
   
@@ -23,12 +25,20 @@
     padding: 0;
     margin: 0;
   }
+
+  ul {
+    list-style: none;
+  }
   
   :root {
     /* Typography */
   
-  
     /* color palette */
     --primary: ;
     --white: #fff;
+    --gray: #ececec;
+    --dark-gray: #79747F;
+    --dark-blue: #323854;
+    --blue: #008AFF;
+    --purple: #8D7FC7;
   }
