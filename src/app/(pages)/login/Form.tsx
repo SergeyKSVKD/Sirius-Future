@@ -1,6 +1,6 @@
 'use client'
 
-import { memo, useState } from 'react';
+import { memo, useLayoutEffect, useState } from 'react';
 import styles from './login.module.scss'
 import cn from 'classnames'
 import Image from 'next/image';
@@ -8,7 +8,7 @@ import Logo from '../../../../public/images/logo.png'
 import Eye from '../../../../public/images/icons/eye.svg'
 import OpenEye from '../../../../public/images/icons/open-eye.svg'
 import Link from 'next/link';
-import { useRouter } from 'next/navigation'
+import { redirect, useRouter } from 'next/navigation'
 
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "@/app/store/store";
@@ -21,6 +21,14 @@ type ResT = {
 
 
 const Form = () => {
+    const user = localStorage.getItem('user')
+
+    useLayoutEffect(() => {
+        if (user) {
+            redirect('/profile')
+        }
+    })
+
     const [showPassword, setShowPassword] = useState<boolean>(false)
     const [email, setEmail] = useState<string>('')
     const [password, setPassword] = useState<string>('')
@@ -62,7 +70,7 @@ const Form = () => {
 
         const response = await fetch(endpoint, options)
         const result = await response.json()
-        
+
         if (result.status !== 'успех') {
             setRes(result)
         }
@@ -78,6 +86,8 @@ const Form = () => {
                 name: result.name,
                 avatar: result.avatar,
             }))
+            localStorage.setItem('user', JSON.stringify(result.name))
+            localStorage.setItem('avatar', JSON.stringify(result.avatar))
             router.push('/profile')
         }
     }
@@ -87,11 +97,11 @@ const Form = () => {
             <form onSubmit={handleSubmit}>
                 <Image src={Logo} alt='logo' />
                 <p className={styles.title}>{lang === 'RU' ? 'Вход в Sirius Future' : 'Log in Sirius Future'}</p>
-                <input className={styles.input} type="text" placeholder='E-mail' value={email} onChange={handleEmail}/>
+                <input className={styles.input} type="text" placeholder='E-mail' value={email} onChange={handleEmail} />
                 <div className={styles.password}>
                     <input className={styles.input} type={
                         showPassword ? 'text' : 'password'
-                    } placeholder={lang === 'RU' ? 'Пароль' : 'Password'} value={password} onChange={handlePass}/>
+                    } placeholder={lang === 'RU' ? 'Пароль' : 'Password'} value={password} onChange={handlePass} />
                     {showPassword ?
                         <OpenEye onClick={() => {
                             setShowPassword(!showPassword)

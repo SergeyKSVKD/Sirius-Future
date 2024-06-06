@@ -1,0 +1,6 @@
+.container {
+    display: grid;
+    grid-template-areas: 'nav hello'
+                          'nav main';
+    grid-template-columns: 28.8rem auto;
+}

@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    height: 6.6rem;
+    justify-content: space-between;
+    padding: 1.2rem 0rem;
+    background-color: #FDFDFF;
+    border-bottom: 0.1rem solid #F6F6FE;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    // filter: drop-shadow(0 2px 4px #8F8FB7);
+}

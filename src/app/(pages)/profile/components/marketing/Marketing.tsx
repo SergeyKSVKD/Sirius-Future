@@ -1,14 +1,16 @@
 import { memo } from 'react'
-import style from './marketing.module.scss'
+import styles from './marketing.module.scss'
 import Gift from './icon/gift.svg'
 
 const Marketing = () => {
 
-    return <div className={style.container}>
-        <p className={style.title}>Учитесь бесплатно</p>
-        <p className={style.text}>Приводите друзей с детьми заниматься в Sirius Future и получайте подарки!</p>
-        <button className={style.btn}>Узнать</button>
-        <Gift />
+    return <div className={styles.container}>
+        <p className={styles.title}>Учитесь бесплатно</p>
+        <p className={styles.text}>Приводите друзей с детьми заниматься в Sirius Future и получайте подарки!</p>
+        <button className={styles.btn}>Узнать</button>
+        <div className={styles.gift_container}>
+            <Gift />
+        </div>
     </div>
 }
 

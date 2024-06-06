@@ -57,23 +57,21 @@ const menu = [
 const Navigation = () => {
     const [activeMenu, setActiveMenu] = useState<string>('Главная')
 
-    return <nav>
-        <div className={styles.container}>
-            <div className={styles.logo}>
-                <Logo />
-            </div>
-            <div className={styles.menu_container}>
-                {menu.map(menu => {
-                    const Icon = menu.icon
-                    return <span key={menu.menu} className={cn(styles.menu, {
-                        [styles.active]: menu.menu === activeMenu
-                    })}
-                        onClick={() => setActiveMenu(menu.menu)}
-                    ><Icon />{menu.menu}</span>
-                })}
-            </div>
-            <Marketing />
+    return <nav className={styles.container}>
+        <div className={styles.logo}>
+            <Logo />
         </div>
+        <div className={styles.menu_container}>
+            {menu.map(menu => {
+                const Icon = menu.icon
+                return <span key={menu.menu} className={cn(styles.menu, {
+                    [styles.active]: menu.menu === activeMenu
+                })}
+                    onClick={() => setActiveMenu(menu.menu)}
+                ><Icon />{menu.menu}</span>
+            })}
+        </div>
+        <Marketing />
     </nav>
 }
 

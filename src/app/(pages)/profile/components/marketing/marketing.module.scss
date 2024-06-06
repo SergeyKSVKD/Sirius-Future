@@ -5,9 +5,39 @@
     height: 12.8rem;
     border-radius: 1.5rem;
     background-color: rgba(253, 253, 255, 1);
+    padding: 1rem 1.7rem;
+    overflow: hidden;
+    margin: 2.1rem;
         .title {
             font-size: 1.6rem;
             line-height: 2rem;
             color: rgba(50, 56, 84, 1);
+        }
+        .text {
+            width: 14.6rem;
+            font-size: 1rem;
+            line-height: 1.2rem;
+            font-weight: 400;
+            color: var(--dark-blue);
+        }
+        .btn {
+            width: 6.8rem;
+            height: 3.2rem;
+            background-color: #D8ECFF;
+            padding: 0.8rem 1.6rem;
+            border: none;
+            border-radius: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.62rem;
+            font-weight: 400;
+            color: var(--dark-blue);
+                &:hover {
+                    cursor: pointer;
+                }
+        }
+        .gift_container {
+            position: absolute;
+            top: 6rem;
+            left: 12.3rem;
         }
 }

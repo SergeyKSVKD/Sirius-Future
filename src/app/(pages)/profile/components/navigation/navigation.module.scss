@@ -1,8 +1,10 @@
 .container {
     display: grid;
+    grid-area: nav;
     width: 23.6rem;
     height: 70.4rem;
-    grid-template-rows: 14.6rem 36rem auto;
+    grid-template-rows: 14.6rem 36rem 19.6rem;
+    align-items: center;
     border-radius: 3rem;
     background: var(--light-blue);
     margin: 2.4rem 5rem;

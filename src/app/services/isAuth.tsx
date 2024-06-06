@@ -7,12 +7,13 @@ import { useLayoutEffect } from "react";
 
 export default function IsAuth() {
   const isAuth = useSelector((state: RootState) => state.AppState.isAuth)
+  const user = localStorage.getItem('user')
 
   useLayoutEffect(() => {
-      if (isAuth) {
+      if (isAuth || user) {
           redirect('/profile')
       }
-      if (!isAuth) {
+      if (!isAuth || !user) {
         redirect('/login')
       }
   }
