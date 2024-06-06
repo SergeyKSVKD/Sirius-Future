@@ -1,0 +1,13 @@
+.container {
+    position: relative;
+    display: grid;
+    width: 19.6rem;
+    height: 12.8rem;
+    border-radius: 1.5rem;
+    background-color: rgba(253, 253, 255, 1);
+        .title {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            color: rgba(50, 56, 84, 1);
+        }
+}

@@ -1,9 +1,11 @@
-import styles from "./page.module.scss";
+import IsAuth from "./services/isAuth";
+import StoreLayout from "./store/StoreLayout";
 
 export default function Home() {
+
   return (
-    <main className={styles.main}>
-      Hello app
-    </main>
+    <StoreLayout>
+      <IsAuth />
+    </StoreLayout>
   );
 }
