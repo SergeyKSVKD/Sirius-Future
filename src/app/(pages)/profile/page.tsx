@@ -8,6 +8,7 @@ import { RootState } from "@/app/store/store";
 import { redirect } from 'next/navigation'
 import Navigation from './components/navigation/Navigation';
 import Hello from './components/hello/Hello';
+import Main from './components/main/Main';
 
 const Profile = () => {
     const isAuth = useSelector((state: RootState) => state.AppState.isAuth)
@@ -23,6 +24,7 @@ const Profile = () => {
     return user ? <div className={styles.container}>
         <Navigation />
         <Hello />
+        <Main />
     </div> : <></>
 }
 

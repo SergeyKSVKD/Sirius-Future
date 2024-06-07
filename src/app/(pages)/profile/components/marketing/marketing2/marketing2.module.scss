@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+    display: grid;
+    grid-template-rows: 12rem 7.2rem auto;
+    width: 52.6rem;
+    height: 24.8rem;
+    border-radius: 3rem;
+    background-color: #7362BC;
+    overflow: hidden;
+        .title {
+            font-size: 3.2rem;
+            line-height: 3.2rem;
+            color: var(--white);
+            width: 36.6rem;
+            height: 6.4rem;
+            margin: 5.6rem 0 0 4rem;
+        }
+        .subtitle {
+            font-size: 1.6rem;
+            line-height: 2rem;
+            font-weight: 300;
+            color: var(--white);
+            width: 29.4rem;
+            height: 6rem;
+            margin: 1.2rem 0 0 4rem;
+        }
+        .sf_container {
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+        }
+}

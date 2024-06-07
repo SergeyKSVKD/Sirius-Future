@@ -2,7 +2,7 @@ import { memo } from 'react'
 import styles from './marketing.module.scss'
 import Gift from './icon/gift.svg'
 
-const Marketing = () => {
+const Marketing1 = () => {
 
     return <div className={styles.container}>
         <p className={styles.title}>Учитесь бесплатно</p>
@@ -14,4 +14,4 @@ const Marketing = () => {
     </div>
 }
 
-export default memo(Marketing)
+export default memo(Marketing1)

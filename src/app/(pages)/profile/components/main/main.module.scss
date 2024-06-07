@@ -1,0 +1,40 @@
+.container {
+    display: grid;
+    gap: 2rem;
+    // grid-template-areas: 
+    // "marketing2 next_lesson reports"
+    // "balance upcoming upcoming";
+    padding: 2rem 3rem;
+    font-size: 4.8rem;
+    color: var(--dark-blue);
+    .section_1 {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        gap: 2rem;
+    }
+    .section_2 {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+        gap: 2rem;
+    }
+}
+
+// .marketing2 {
+//     grid-area: marketing2;
+// }
+
+// .next_lesson {
+//     grid-area: next_lesson;
+// }
+
+// .reports {
+//     grid-area: reports;
+// }
+
+// .balance {
+//     grid-area: balance;
+// }
+
+// .upcoming {
+//     grid-area: upcoming;
+// }

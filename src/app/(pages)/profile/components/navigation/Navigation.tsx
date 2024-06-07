@@ -13,9 +13,17 @@ import Support from './icon/support.svg'
 import Settings from './icon/settings.svg'
 import Question from './icon/question.svg'
 import { memo, useState } from 'react'
-import Marketing from '../marketing/Marketing'
+import Marketing from '../marketing/marketing/Marketing'
+import { Modules, changeModule } from '../../../../store/app-slice'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '@/app/store/store'
 
-const menu = [
+type Menu = {
+    menu: Modules,
+    icon: any,
+}
+
+const menu: Menu[] = [
     {
         menu: 'Главная',
         icon: Home,
@@ -56,6 +64,7 @@ const menu = [
 
 const Navigation = () => {
     const [activeMenu, setActiveMenu] = useState<string>('Главная')
+    const dispatch = useDispatch<AppDispatch>()
 
     return <nav className={styles.container}>
         <div className={styles.logo}>
@@ -67,7 +76,11 @@ const Navigation = () => {
                 return <span key={menu.menu} className={cn(styles.menu, {
                     [styles.active]: menu.menu === activeMenu
                 })}
-                    onClick={() => setActiveMenu(menu.menu)}
+                    onClick={() => {
+                        const module = menu.menu
+                        dispatch(changeModule(module))
+                        setActiveMenu(menu.menu)
+                    }}
                 ><Icon />{menu.menu}</span>
             })}
         </div>

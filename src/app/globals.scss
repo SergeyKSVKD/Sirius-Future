@@ -6,7 +6,7 @@
   
   body {
     display: grid;
-    grid-template-columns: minmax(350px, 1920px);
+    grid-template-columns: minmax(350px, 1440px);
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -40,7 +40,7 @@
     --white: #fff;
     --gray: #ececec;
     --dark-gray: #79747F;
-    --dark-blue: #323854;
+    --dark-blue: rgba(50, 56, 84, 1);
     --blue: #008AFF;
     --light-blue: rgba(238, 238, 255, 1);
     --purple: #8D7FC7;

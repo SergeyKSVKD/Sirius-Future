@@ -7,10 +7,13 @@ type Profile = {
     avatar?: string,
 }
 
+export type Modules = 'Главная' | 'Расписание'| 'Оплата' | 'Достижения' | 'Тренажеры' | 'Библиотека' | 'Проверка связи' | 'Настройки' | 'Вопросы'
+
 interface AppI {
     lang: lang,
     isAuth: isAuth,
     profile: Profile
+    module: Modules
 }
 const initialState: AppI = {
     lang: 'RU',
@@ -18,7 +21,8 @@ const initialState: AppI = {
     profile: {
         name: '',
         avatar: ''
-    }
+    },
+    module: 'Главная'
 }
     
 
@@ -38,6 +42,9 @@ const AppSlice = createSlice({
                 avatar: action.payload.avatar
             }
         },
+        changeModule: (state, action: PayloadAction<Modules>) => {
+            state.module = action.payload
+        },
         resetApp: (state) => {
             const newState = {...initialState}
             
@@ -54,4 +61,4 @@ const AppSlice = createSlice({
 })
 
 export const AppReducer = AppSlice.reducer
-export const { changeLang, changeIsAuth, setProfile, resetApp } = AppSlice.actions
+export const { changeLang, changeIsAuth, setProfile, changeModule, resetApp } = AppSlice.actions

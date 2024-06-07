@@ -1,0 +1,35 @@
+.container {
+    display: grid;
+    gap: 2rem;
+    width: 16.2rem;
+    height: 24.8rem;
+    
+    .reports_container, .tasks_container {
+        display: grid;
+        grid-template-rows: 3rem auto;
+        align-items: start;
+        width: 16.2rem;
+        height: 11.4rem;
+        border-radius: 2rem;
+        justify-items: center;
+        padding: 3.2rem 0;
+            &:hover {
+                cursor: pointer;
+            }
+    }
+    .reports_container {
+        background-color: #E8CBFF;
+    }
+    .tasks_container {
+        background-color: #D8ECFF;
+    }
+
+    .title {
+        width: 16.2rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+        color: var(--dark-blue);
+        text-align: center;
+    }
+}
