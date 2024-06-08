@@ -6,4 +6,66 @@
     padding: 2.8rem 0.4rem 3rem 2.8rem;
     background-color: var(--white);
     border: 0.2rem solid #7362BC;
+
+    .title {
+        font-size: 2.4rem;
+        font-weight: 2.4rem;
+        color: var(--dark-blue);
+    }
+
+    .lessons {
+        display: grid;
+        width: 31.2rem;
+        height: 27.4rem;
+
+        .lesson {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: space-between;
+            align-items: center;
+            width: 28.8rem;
+            height: 6rem;
+            border-radius: 1.2rem;
+            padding: 1rem 0;
+            .name {
+                font-size: 1.6rem;
+                font-weight: 2rem;
+                color: var(--dark-blue);
+            }
+            .count {
+                display: grid;
+                align-items: center;
+                justify-items: center;
+                border-radius: 50%;
+                background-color: #EEEEFF;
+                width: 4rem;
+                height: 4rem;
+                font-size: 2rem;
+                line-height: 4.4rem;
+                color: var(--dark-blue);
+                }
+            }
+            .divider {
+                width: 28.8rem;
+                border-bottom: 0.1rem solid #EEEEFF;
+            }
+        .btn {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3rem;
+            padding: 1rem 4rem;
+            width: 28.8rem;
+            height: 4rem;
+            background-color: #decfff;
+            border: none;
+            font-size: 1.6rem;
+            font-weight: 2.16rem;
+            color: var(--dark-blue);
+            margin-top: 4rem;
+                &:hover {
+                    cursor: pointer;
+                }
+        }
+    }
 }

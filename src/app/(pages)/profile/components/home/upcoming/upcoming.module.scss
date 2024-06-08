@@ -6,4 +6,131 @@
     padding: 2.8rem 0.4rem 3rem 2.8rem;
     background-color: var(--white);
     border: 0.2rem solid #7362BC;
+
+    .title {
+        font-size: 2.4rem;
+        font-weight: 2.4rem;
+        color: var(--dark-blue);
+    }
+
+    .lessons {
+        display: grid;
+        width: 65.2rem;
+        height: 27.4rem;
+
+        .lesson {
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            align-items: center;
+            width: 65.2rem;
+            height: 6rem;
+            border-radius: 1.2rem;
+            .date {
+                display: grid;
+                grid-template-rows: 3.2rem 1.6rem;
+                width: 4.2rem;
+                height: 4.8rem;
+                .number {
+                    text-align: center;
+                    font-size: 3.2rem;
+                    font-weight: 3.2rem;
+                    color: var(--dark-blue);
+                }
+                .mounth {
+                    text-align: center;
+                    font-size: 1.2rem;
+                    font-weight: 1.6rem;
+                    color: var(--dark-blue);
+                }
+            }
+            .name {
+                width: 22.2rem;
+                font-size: 1.6rem;
+                font-weight: 2.16rem;
+                color: var(--dark-blue);
+            }
+            .time {
+                width: 7rem;
+                font-size: 1.2rem;
+                font-weight: 1.62rem;
+                color: var(--dark-blue);
+            }
+            .teacher {
+                display: grid;
+                grid-template-columns: 1.6rem auto;
+                width: 16.8rem;
+                align-items: center;
+                gap: 0.3rem;
+                svg {
+                    transform: translateY(-0.2rem);
+                }
+
+                .name {
+                    font-size: 1.2rem;
+                    font-weight: 1.62rem;
+                    font-weight: 300;
+                    color: var(--dark-blue);
+                }
+            }
+            .btn_container {
+                display: flex;
+                gap: 0.4rem;
+
+                .btn1 {
+                    width: 5.6rem;
+                    height: 3.2rem;
+                    border-radius: 1.5rem;
+                    border: 0.1rem solid #8D7FC7;
+                    padding: 0.8rem 1rem;
+                    font-size: 1.2rem;
+                    font-weight: 1.62rem;
+                    color: var(--dark-blue);
+                    background-color: var(--white);
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .btn2 {
+                    width: 5.6rem;
+                    height: 3.2rem;
+                    border-radius: 1.5rem;
+                    border: none;
+                    background-color: #8D7FC7;
+                    padding: 0.8rem 1rem;
+                    font-size: 1.2rem;
+                    font-weight: 1.62rem;
+                    color: var(--white);
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .inactive {
+                    border: 0.1rem solid #EEEEFF;
+                }
+            }
+            }
+            .divider {
+                width: 65.2rem;
+                border-bottom: 0.1rem solid #EEEEFF;
+            }
+        .btn {
+            display: grid;
+            justify-self: center;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3rem;
+            padding: 1rem 4rem;
+            width: 34.4rem;
+            height: 4rem;
+            background-color: #decfff;
+            border: none;
+            font-size: 1.6rem;
+            font-weight: 2.16rem;
+            color: var(--dark-blue);
+            margin-top: 4rem;
+                &:hover {
+                    cursor: pointer;
+                }
+        }
+    }
 }
