@@ -1,6 +1,6 @@
 'use client'
 
-import { memo, useLayoutEffect } from 'react'
+import { memo, useLayoutEffect, useState } from 'react'
 import styles from './profile.module.scss'
 import cn from 'classnames'
 import { useSelector } from "react-redux";
@@ -12,14 +12,15 @@ import Main from './components/main/Main';
 
 const Profile = () => {
     const isAuth = useSelector((state: RootState) => state.AppState.isAuth)
-    const user = localStorage.getItem('user')
+    const [user, setUser] = useState('')
 
     useLayoutEffect(() => {
-        if (!user) {
-            redirect('/login')
-        }
-    })
-
+      const actual = window.localStorage.getItem('user')
+      setUser(actual ? actual : '')
+      if (!actual) {
+        redirect('/login')
+    }
+    }, [])
 
     return user ? <div className={styles.container}>
         <Navigation />
